@@ -1,6 +1,6 @@
 # Source: https://leetcode.com/problems/hamming-distance/description/
 # Author: Paulo Lemus
-# Date  : 2017-10-01
+# Date  : 2017-11-01
 
 # The Hamming distance between two integers is the number of positions at which the corresponding bits are different.
 #
