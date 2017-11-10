@@ -1,4 +1,4 @@
 # Leetcode
 
-Completed Python / Java / JavaScript / C++ Leetcode solutions.
+Completed Python / Java / JavaScript / C / C++ Leetcode solutions.
 
