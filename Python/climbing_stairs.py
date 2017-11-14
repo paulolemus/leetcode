@@ -1,7 +1,7 @@
 # Source: https://leetcode.com/problems/climbing-stairs/description/
 # Author: Paulo Lemus
-# Date  : 2017-11-11
-# Info  : #70, Easy
+# Date  : 2017-11-14
+# Info  : #70, Easy, 46 ms, 92.35%
 
 # You are climbing a stair case. It takes n steps to reach to the top.
 #
@@ -38,4 +38,22 @@ class Solution:
 
         memo[n] = self._topDown(n-1, memo) + self._topDown(n-2, memo)
         return memo[n]
+
+# 46 ms, 92.35%
+class Solution:
+    def climbStairs(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+        if n < 2:
+            return 1
+
+        ways = [0] * n
+        ways[0], ways[1] = 1, 2
+
+        for i in range(2, n):
+            ways[i] = ways[i-1] + ways[i-2]
+
+        return ways[n-1]
 
