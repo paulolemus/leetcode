@@ -1,7 +1,7 @@
 # Source: https://leetcode.com/problems/add-digits/description/
 # Author: Paulo Lemus
 # Date  : 2017-11-16
-# Info  : #258, Easy
+# Info  : #258, Easy, 96 ms, 75%
 
 # Given a non-negative integer num, repeatedly add all its digits until the result has only one digit.
 #
@@ -16,6 +16,7 @@
 # Special thanks to @jianchao.li.fighter for adding this problem and creating all test cases.
 
 
+# 96 ms, 75%
 class Solution:
     def addDigits(self, num):
         """
