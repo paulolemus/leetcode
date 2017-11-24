@@ -16,21 +16,24 @@
  * return [0, 1].
  */
 
+#include <unordered_map>
+#include <vector>
 
 class Solution {
 public:
-    vector<int> twoSum(vector<int>& nums, int target) {
+    std::vector<int> twoSum(std::vector<int>& nums, int target) {
         
-        unordered_map<int, int> matches;
+        std::unordered_map<int, int> matches;
         
         int i = 0;
         for(auto const& num : nums) {
             if(matches.count(num)) {
-                return vector<int>{matches[num], i};
+                return std::vector<int>{matches[num], i};
             }
             matches[target-num] = i;
             i++;
         }
+        return std::vector<int>{-1, -1};
     }
 };
 
