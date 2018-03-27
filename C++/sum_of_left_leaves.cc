@@ -2,7 +2,7 @@
  * Source: https://leetcode.com/problems/sum-of-left-leaves/description/
  * Author: Paulo Lemus
  * Date  : 2017-11-09
- * Number: 404
+ * Info  : #404
  */
 
 /*

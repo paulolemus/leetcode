@@ -2,6 +2,7 @@
  * Source: https://leetcode.com/problems/hamming-distance/description/
  * Author: Paulo Lemus
  * Date  : 2017-11-01
+ * Info  : #461, Easy
  */
 
 /*

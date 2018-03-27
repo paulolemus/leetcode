@@ -1,3 +1,6 @@
+# Leetcode custom
+*.temp
+
 ### C++ Ignores
 # Prerequisites
 *.d
