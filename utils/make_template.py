@@ -11,6 +11,10 @@ Example:
     $ python make_template cc valid parenthesis
 """
 
+###
+### File Header Templates
+###
+
 general_template = """/*
  * Source: {}
  * Author: Paulo Lemus
@@ -22,7 +26,9 @@ general_template = """/*
 {}
  */
 """
+
 general_desc_head = ' * '
+
 
 python_template = """# Source: {}
 # Author: Paulo Lemus
@@ -31,9 +37,14 @@ python_template = """# Source: {}
 
 {}
 """
+
 python_desc_head = '# '
 
-# Naming convention functions take in a list of strings and return a string.
+
+###
+### File Naming Convention functions
+###
+
 def camel_case(words):
     return ''.join(map(str.title, words))
 
@@ -42,6 +53,7 @@ def snake_case(words):
 
 def lisp_case(words):
     return '-'.join(map(str.lower, words))
+
 
 # Languages that templates can be generated for
 languages = {'cc', 'c', 'java', 'js', 'py'}
@@ -110,6 +122,7 @@ def parse_args(languages: Set) -> Tuple[str, List[str]]:
         raise ValueError('Must provide a leetcode problem name')
     return lang, problem
 
+
 def parse_description(soup) -> str:
     """
     Find and parse description in webpage.
@@ -118,6 +131,7 @@ def parse_description(soup) -> str:
     """
     metas = soup.find_all('meta')
     return metas[3]['content']
+
 
 def parse_problem_number(soup) -> str:
     """
