@@ -144,7 +144,15 @@ def format_description(description: str, desc_head: str) -> str:
     :returns: The formatted string.
     """
     max_len = 80 - len(desc_head)
-    lines = description.splitlines()
+    lines = []
+
+    # Make all lines max_len characters or less.
+    for line in description.splitlines():
+        while len(line) > max_len:
+            lines.append(line[:max_len])
+            line = line[max_len:]
+        lines.append(line)
+
     lines = list(map(lambda line: desc_head + line + '\n', lines))
     lines[-1] = lines[-1].rstrip()
     return ''.join(lines)
